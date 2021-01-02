@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+{% block content %}
+{% load static %}
+
+
+    <main>
+        <!-- slider Area Start-->
+        <div class="slider-area ">
+            <div class="single-slider hero-overly slider-height2 d-flex align-items-center" data-background="{% static 'assets/img/hero/about.jpg' %}">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="hero-cap pt-100">
+                                <h2>Members</h2>
+                                <nav aria-label="breadcrumb ">
+                                    <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="#">Members</a></li> 
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- slider Area End-->
+        <div class="container" style="padding-top: 70px; padding-bottom: 70px;">
+
+          <div class="row">
+
+            <table class="table table-bordered table-hover">
+
+                  <thead>
+                    <tr>
+                      <th scope="col">Organization</th>
+                      <th scope="col">Type of organization</th>
+                      <th scope="col">Country</th>
+                      <th scope="col">City</th>
+
+                      <th scope="col">Area of focus</th>
+                      <th scope="col">Webite</th>
+                      <th scope="col">Phone Number 1</th>
+                      <th scope="col">Phone Number 2</th>
+                    </tr>
+                  </thead>
+
+                    {% for post in posts %}
+
+                  <tbody>
+                    <tr>
+                      <td>{{ post.org_name }}</td>
+                      <td>{{ post.org_type }}</td>
+
+                      <td>{{ post.org_country }}</td>
+                      <td>{{ post.org_city }}</td>
+
+                      <td>{{ post.area_of_focus }}</td>
+                      <td>{{ post.org_website }}</td>
+
+                      <td>{{ post.person_phone }}</td>
+                      <td>{{ post.org_phone }}</td>
+
+                    </tr>
+                  </tbody>
+                  {% endfor %}
+            </table>
+
+            
+              
+              
+
+             
+
+          </div>
+          
+        </div>
+
+
+</main>
+
+{% endblock %}
+<!-- start -->
+

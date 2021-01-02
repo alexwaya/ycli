@@ -48,7 +48,7 @@
                             <div class="col-xl-2 col-lg-2 col-md-1">
                                 <div class="logo">
                                     <!-- logo-1 -->
-                                    <a href="/" class="big-logo"><img src="{% static 'assets/img/logo/logo.png' %}" alt=""></a>
+                                    <a href="/" class="big-logo"><img src="{% static 'images/ycli.png' %}" alt=""></a>
                                     <!-- logo-2 -->
                                     <a href="/" class="small-logo"><img src="{% static 'assets/img/logo/loder-logo.png' %}" alt=""></a>
                                 </div>
@@ -76,6 +76,8 @@
                                                 </ul> -->
                                            <!--  </li> -->
                                             <li style="font-family: Verdana"><a href="{% url 'contact' %}">CONTACT</a></li>
+
+                                            <li style="font-family: Verdana"><a href="{% url 'members' %}">MEMBERS</a></li>
 
                                             {% if user.is_authenticated %}
 

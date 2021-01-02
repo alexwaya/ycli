@@ -24,7 +24,7 @@ from django.views.generic.base import TemplateView
 from pages.views import home_view
 from program.views import add_program
 
-from pages.views import about_view, contact_view
+from pages.views import about_view, contact_view, members_directory
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -44,6 +44,8 @@ urlpatterns = [
     path("workshops/", include("workshops.urls")),
 
     path("donate/", include("donate.urls")),
+
+    path("members/", members_directory, name="members")
 ]
 
 
