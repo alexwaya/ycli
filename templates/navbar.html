@@ -21,7 +21,21 @@
                                         <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                                         <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
                                        <li> <a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+
+                                       <li><a class="" href="/donate/">
+            <button type="button" class="btn-danger btn-sm">DONATE</button>
+          </a></li>
+
+                                       
+
                                     </ul>
+
+                                    <!-- <div class="col-xl-2 col-lg-2 col-md-3">
+                                        <div class="header-right-btn f-right d-none d-lg-block">
+                                            <a href="/donate/" class="btn">Donate</a>
+                                        </div>
+                                    </div> -->
+
                                 </div>
                             </div>
                        </div>
@@ -39,38 +53,67 @@
                                     <a href="/" class="small-logo"><img src="{% static 'assets/img/logo/loder-logo.png' %}" alt=""></a>
                                 </div>
                             </div>
-                            <div class="col-xl-8 col-lg-8 col-md-8">
+                            <div class="col-xl-10 col-lg-10 col-md-10">
                                 <!-- Main-menu -->
                                 <div class="main-menu f-right d-none d-lg-block">
                                     <nav> 
                                         <ul id="navigation">                                                                                                                   
-                                            <li><a href="/">Home</a></li>
-                                            <li><a href="{% url 'about' %}">About</a></li>
-                                            <li><a href="{% url 'programs' %}">Programs</a></li>
+                                            <li style="font-family: Verdana"><a href="/">HOME</a></li>
+                                            <li style="font-family: Verdana"><a href="{% url 'about' %}">ABOUT</a></li>
+                                            <li style="font-family: Verdana"><a href="{% url 'programs' %}">PROGRAMS</a></li>
                                             <!-- <li><a href="services.html">Services</a></li> -->
-                                            <li><a href="/events/">Events</a>
-                                                <!-- <ul class="submenu">
-                                                    <li><a href="blog.html">Blog</a></li>
-                                                    <li><a href="single-blog.html">Blog Details</a></li>
-                                                </ul> -->
+                                            <li style="font-family: Verdana"><a href="#">MEDIA</a>
+                                                <ul class="submenu">
+                                                    <li style="font-family: Verdana"><a href="/events/">EVENTS</a></li>
+                                                    <li style="font-family: Verdana"><a href="/workshops/">WORKSHOPS</a></li>
+                                                </ul>
                                             </li>
-                                            <li><a href="/workshops/">Workshops</a>
+                                            <!-- <li style="font-family: Verdana"><a href="/workshops/">WORKSHOPS</a> -->
                                                 <!-- <ul class="submenu">
                                                     <li><a href="elements.html">Element</a></li>
                                                     <li><a href="project_details.html">Projects Details</a></li>
                                                     <li><a href="services_details.html">Services Details</a></li>
                                                 </ul> -->
-                                            </li>
-                                            <li><a href="{% url 'contact' %}">Contact</a></li>
+                                           <!--  </li> -->
+                                            <li style="font-family: Verdana"><a href="{% url 'contact' %}">CONTACT</a></li>
+
+                                            {% if user.is_authenticated %}
+
+                                         <li class="nav-item" style="font-family: Verdana">
+                                          <a class="nav-link" href="{% url 'dashboard' %}">
+                                            <button type="button" class=" btn-primary btn-sm">DASHBOARD</button>
+                                          </a>
+                                        </li>
+
+                                        <li class="nav-item" style="font-family: Verdana">
+                                          <a class="nav-link" href="{% url 'logout' %}">
+                                            <button type="button" class="btn-warning btn-sm">LOG OUT</button>
+                                          </a>
+                                        </li>
+
+                                        {% else %}
+
+                                        <li class="nav-item" style="font-family: Verdana">
+                                          <a class="nav-link" href="{% url 'login' %}">
+                                            <button type="button" class=" btn-primary btn-sm">LOGIN</button>
+                                          </a>
+                                        </li>
+
+                                        <li class="nav-item" style="font-family: Verdana">
+                                          <a class="nav-link" href="{% url 'signup' %}">
+                                            <button type="button" class=" btn-success btn-sm">REGISTER</button>
+                                          </a>
+                                        </li>
+
+                                        {% endif %}
+
+
+
                                         </ul>
                                     </nav>
                                 </div>
                             </div>             
-                            <div class="col-xl-2 col-lg-2 col-md-3">
-                                <div class="header-right-btn f-right d-none d-lg-block">
-                                    <a href="/donate/" class="btn">Donate</a>
-                                </div>
-                            </div>
+                            
                             <!-- Mobile Menu -->
                             <div class="col-12">
                                 <div class="mobile_menu d-block d-lg-none"></div>

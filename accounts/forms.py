@@ -9,9 +9,35 @@ class CustomUserCreationForm(UserCreationForm):
         model = CustomUser
         fields = (
 
-            'username',
-            'email',
             'org_name',
+            'org_type',
+
+            'org_email',
+            'org_phone',
+
+            'org_website',
+            'org_address',
+
+            'org_city',
+            'org_country',
+
+            'person_name',
+            'person_org_title',
+
+            'person_email',
+            'person_phone',
+
+            'staff_no',
+            'area_of_focus',
+
+            'mission',
+
+            'username',
+            # 'email',
+            # 'org_name',
+
+            # 'phone',
+
             
             )
 

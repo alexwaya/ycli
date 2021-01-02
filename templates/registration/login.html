@@ -1,10 +1,9 @@
 {% extends 'base.html' %}
 
-{% block title %}Log In{% endblock %}
-
+{% block title %}Home{% endblock %}
 {% block content %}
-
 {% load static %}
+
 
 <style type="text/css">
 	
@@ -337,11 +336,32 @@ input[type=password]:placeholder {
 
 </style>
 
-<div class="demo_wrap" style="height: 250px;">
-    <h4 style="padding-top: 145px; text-align: center; font-size: 25px; font-family: 'Varela Round'; font-weight: 550">Login</h4>
-</div>
+<!-- custom -main starts -->
 
-<div style="height: 2.3px; background-color: #27AE60;"></div>
+
+
+<!-- slider Area Start-->
+<div class="slider-area ">
+    <div class="single-slider hero-overly slider-height2 d-flex align-items-center" data-background="{% static 'assets/img/hero/about.jpg' %}">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="hero-cap pt-100">
+                        <h2>Login</h2>
+                        <nav aria-label="breadcrumb ">
+                            <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">Login</a></li> 
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- slider Area End-->
+
 
 <div class="wrapper fadeInDown">
   <div id="formContent">
