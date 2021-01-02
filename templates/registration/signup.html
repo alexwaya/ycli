@@ -1,0 +1,204 @@
+{% extends 'base.html' %}
+
+{% block title %}Sign Up{% endblock %}
+
+{% block content %}
+
+
+{% load static %}
+
+<style type="text/css">
+	.demo_wrap {
+    position: relative;
+    background: #000;
+    overflow: hidden;
+}
+.demo_wrap h1 {
+    padding: 50px;
+    position: relative;
+    z-index: 2;
+}
+/* You could use :after - it doesn't really matter */
+.demo_wrap:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.4;
+    background-image: url('{% static 'images/bg/bana.jpg' %}');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+</style>
+
+
+<div class="demo_wrap" style="height: 250px;">
+    <h4 style="padding-top: 145px; text-align: center; font-size: 25px; font-family: 'Varela Round'; font-weight: 550">Register</h4>
+</div>
+
+<div style="height: 2.3px; background-color: #27AE60;"></div>
+
+<div class="row" style="padding-top: 30px; padding-bottom: 70px;">
+
+<div class="container">
+    <div class="row">
+        <br>
+        <br>
+    </div>
+
+    <div class="row">
+
+      <div class="col-md-6">
+
+
+
+      <p style="color: #000; text-align: justify; font-size: 14px;">
+By registering with the ASF forum, stakeholders join the county chapters of their county where they have active programs.
+
+<br><br>
+
+This enables them to jointly take part in advancing the mandate of the ASF which involves the following key areas of action:
+<br><br>
+
+1.) To strengthen citizen engagement processes and practices. <br>
+
+2.) To enhance accountability and transparency in governance through strengthening the capacity of citizen led social audit and accountability processes. <br>
+
+3.) To coordinate and collaborate.<br>
+
+4.) Networking and Coordination, Joint action, Awareness Raising and Debate . 
+
+      </p>
+
+
+        
+      </div>
+        <div class="col-md-6">
+            <form method="post">
+                {% csrf_token %}
+
+                <div class="row">
+                	<div class="col-md-6">
+                		<div class="form-group">
+			                <label for="exampleInputEmail1">Organization's Name</label>
+			                <input type="text" class="form-control" name="org_name" aria-describedby="emailHelp" placeholder="Organization's Name" required>
+		              </div>
+                	</div>
+                	<div class="col-md-6">
+                		<!-- <div class="form-group">
+			                <label for="exampleInputEmail1">Phone Number</label>
+			                <input type="tel" class="form-control" name="phone_number" aria-describedby="emailHelp" placeholder="Phone Number" required>
+			            </div> -->
+                	</div>
+                </div>
+
+              
+
+              <!-- <div class="row">
+              	<div class="col-md-6">
+              		<div class="form-group">
+		                <label for="exampleInputEmail1">Years Operating</label>
+		                <input type="number" class="form-control" name="years_operating" aria-describedby="emailHelp" placeholder="Years Operating" required>
+		            </div>
+              	</div>
+              	<div class="col-md-6">
+              		<div class="form-group">
+		                <label for="exampleInputEmail1">Areas of interest</label>
+		                <input type="text" class="form-control" name="areas_of_interest" aria-describedby="emailHelp" placeholder="Areas of interest" required>
+		            </div>
+              	</div>
+              </div> -->
+
+
+            <!--   <div class="row">
+              	<div class="col-md-6">
+              		<div class="form-group">
+		                <label for="exampleInputEmail1">Geographic Scope</label>
+		                <input type="text" class="form-control" name="geographic_scope" aria-describedby="emailHelp" placeholder="Geographic Scope" required>
+		            </div>
+              	</div>
+              	<div class="col-md-6">
+              		<div class="form-group">
+		                <label for="exampleInputEmail1">Branch Offices</label>
+		                <input type="text" class="form-control" name="branch_offices" aria-describedby="emailHelp" placeholder="Branch Offices" required>
+		            </div>
+              	</div>
+              </div> -->
+
+              <div class="row">
+              	<div class="col-md-6">
+              		<!-- <div class="form-group">
+		                <label for="exampleInputEmail1">Target Collaborators</label>
+		                <input type="text" class="form-control" name="target_collaborators" aria-describedby="emailHelp" placeholder="Target Collaborators" required>
+		            </div> -->
+              	</div>
+	            <div class="col-md-6">
+	            	
+	            	<div class="form-group">
+		                <label for="exampleInputEmail1">Email Address</label>
+
+		                <input  type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="Email Address" required>
+		              </div>
+	            </div>
+              </div>
+
+              <div class="row">
+              	<div class="col-md-6">
+              		<!-- <div class="form-group">
+		               <label for="exampleInputEmail1">Choose County</label>
+
+          						<select id="categories" name="categories" class="form-control" aria-describedby="emailHelp" required>
+
+          						  <option value="Wajir">Wajir County</option>
+          						  <option value="Turkana">Turkana County</option>
+          						  <option value="Tharaka Nithi">Tharaka Nithi County</option>
+          						  <option value="Tana River" selected>Tana River County</option>
+
+          						</select>
+
+		            </div> -->
+              	</div>
+              	<div class="col">
+              		<div class="form-group">
+		                <label for="exampleInputEmail1">Username</label>
+		                <input type="text" class="form-control" name="username" aria-describedby="emailHelp" placeholder="Enter username" required>
+		            </div>
+              	</div>
+              </div>
+
+
+              <div class="row">
+              	<div class="col-md-6">
+              		<div class="form-group">
+		                <label for="exampleInputPassword1">Password</label>
+		                <input type="password" class="form-control" name="password1" id="exampleInputPassword1" placeholder="Password" required>
+		              </div>
+              	</div>
+
+              	<div class="col-md-6">
+              		<div class="form-group">
+		                <label for="exampleInputPassword1">Confirm Password</label>
+		                <input type="password" class="form-control" name="password2" id="exampleInputPassword1" placeholder="confirm password" required>
+		              </div>
+              	</div>
+              </div>
+
+              	<br>
+
+              <div class="form-group">
+              	<button type="submit" class="btn btn-success btn-block">Register </button>
+          	  </div>
+
+            </form>
+        </div>
+    </div>
+    </div>
+	
+</div>
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+{% block content %}
+{% load static %}
+
+
+    <main>
+        <!-- slider Area Start-->
+        <div class="slider-area ">
+            <div class="single-slider hero-overly slider-height2 d-flex align-items-center" data-background="{% static 'assets/img/hero/about.jpg' %}">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="hero-cap pt-100">
+                                <h2>Program Details</h2>
+                                <nav aria-label="breadcrumb ">
+                                    <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="#">Program Details</a></li> 
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- slider Area End-->
+        <div class="container-fluid">
+
+              <div class="row">
+
+                <div class="container">
+
+                    <div class="col-md-8 offset-md-2">
+
+                        <h1>{{ program.title }}</h1>
+
+                        <img style="width: 100%; height: 150px;" src="{{ program.photo.url }}" alt="{{ image.title }}">
+
+                        <p>{{ program.description }}</p>
+
+                        <a href="{% url 'apply_program' program.pk %}"><button>Apply For Program</button></a>
+                        
+                    </div>
+                    
+                </div>
+
+              </div>
+          
+        </div>
+
+
+</main>
+
+{% endblock %}

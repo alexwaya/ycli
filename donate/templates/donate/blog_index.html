@@ -1,0 +1,154 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+{% block content %}
+{% load static %}
+
+
+    <main>
+        <!-- slider Area Start-->
+        <div class="slider-area ">
+            <div class="single-slider hero-overly slider-height2 d-flex align-items-center" data-background="{% static 'assets/img/hero/about.jpg' %}">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="hero-cap pt-100">
+                                <h2>Donate</h2>
+                                <nav aria-label="breadcrumb ">
+                                    <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="#">Donate</a></li> 
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- slider Area End-->
+        <div class="container-fluid">
+          <div class="row">
+
+            <div class="container">
+    <div class="row">
+        <br>
+        <br>
+    </div>
+    <div class="row">
+
+        <div class="col-md-5">
+
+          <!-- <p style="color: #000; text-align: justify; font-size: 14px;">
+The Forum has been successful in delivering on its set mandate and achieved some milestones such as the development of a 5 year Strategic Plan 2018-2022 with implementation plan and budgets as well as acting as the national and county level think tank for the development of the ASALs. 
+
+<br><br>
+
+The National forum has in 2020 through the support from the EU-EDE program re-launched and set up institutional structures in the counties of Isiolo, Marsabit, Samburu and Kilifi. However these county forums need capacity building on various areas including; institutional development, resource mobilization and secretarial support. 
+
+<br><br>
+
+Further support is needed to achieve the following key areas as defined in the strategic plan:
+<br>
+• Re-launch the remaining 14 county chapters
+<br>
+• Build capacity of the 17 County forums to strengthen their organizational structures that can enhance their continued and vibrant functioning.
+<br>
+• Establish institutional link between the county chapters and community forums towards enhancing citizen engagement and social accountability.
+
+<br><br>
+To help or to partner with us in these areas, we welcome any partner interested to work with us. 
+
+          </p> -->
+          
+        </div>
+
+        
+        <div class="col-md-7">
+
+          <h6 style="color: #000;">Fill the form to access our aid appeal documents.</h6>
+
+          <hr>
+
+            <form method="post">
+                {% csrf_token %}
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">First Name</label>
+                      <input type="text" class="form-control" name="fname" aria-describedby="emailHelp" placeholder="First Name" required>
+                  </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Last Name</label>
+                      <input type="text" class="form-control" name="lname" aria-describedby="emailHelp" placeholder="Last Name" required>
+                  </div>
+                  </div>
+                </div>
+
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Email Address</label>
+                      <input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="Email Address" required>
+                  </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Phone Number</label>
+                      <input type="tel" class="form-control" name="phone" aria-describedby="emailHelp" placeholder="Phone Number" required>
+                  </div>
+                  </div>
+                </div>
+
+
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Type of Donation</label>
+                      <input type="text" class="form-control" name="type_of_donation" aria-describedby="emailHelp" placeholder="Type of Donation" required>
+                  </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Amount</label>
+                      <input type="text" class="form-control" name="amount" aria-describedby="emailHelp" placeholder="Amount" required>
+                  </div>
+                  </div>
+                </div>
+
+
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Your Comments</label>
+
+                      <textarea type="text" class="form-control" aria-describedby="emailHelp" rows="4" cols="55" name="comments" placeholder="Your Comments" required></textarea>
+
+                      <!-- <input type="text" name="comments" class="form-control" aria-describedby="emailHelp" rows="5" placeholder="Your Comments" required> -->
+                  </div>
+                  </div>
+                </div>
+
+                
+
+              <div class="form-group">
+                <button type="submit" class="btn btn-success btn-block">Donate</button>
+              </div>
+
+            </form>
+        </div>
+    </div>
+    </div>
+
+          </div>
+        </div>
+</main>
+
+{% endblock %}
+<!-- start -->
+

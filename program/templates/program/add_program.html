@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+{% load static %}
+
+<h6 style="text-align: center; padding:50px 0;">Add Programs</h6>
+
+<hr>
+
+
+        <div class="col-md-6 offset-3">
+
+            <form method="post">
+                {% csrf_token %}
+
+                <div class="row">
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Name of Program</label>
+                  </div>
+                      <input type="text" class="form-control" name="title" aria-describedby="emailHelp" placeholder="Name of Program" required>
+                  </div>
+                 </div>
+
+                 <!--  <div class="col">
+                    <div class="form-group">
+
+		               <label for="exampleInputEmail1">Choose County</label>
+
+						<select id="categories" name="categories" class="form-control" aria-describedby="emailHelp" required>
+
+						  <option value="Wajir">Wajir</option>
+						  <option value="Turkana">Turkana</option>
+						  <option value="Tharaka Nithi">Tharaka</option>
+
+						</select>
+
+		            </div>
+                  </div> -->
+
+                   <div class="row">
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Body Program Description</label>
+
+                      <textarea type="text" class="form-control" aria-describedby="emailHelp" rows="4" cols="55" name="body" placeholder="Body Program Description" required></textarea>
+
+                  </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                <button type="submit" class="btn btn-success btn-block">Add Program</button>
+              </div>
+
+
+                </div>
+
+            </form>
+        </div>
+
+
+{% endblock %}
