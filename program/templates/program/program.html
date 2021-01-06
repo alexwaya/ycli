@@ -1,13 +1,50 @@
 {% extends 'base.html' %}
 
-{% block title %}Home{% endblock %}
+{% block title %}Programs{% endblock %}
 {% block content %}
 {% load static %}
 
 
-    <main>
+<style type="text/css">
+    .demo_wrap {
+    position: relative;
+    background: #000;
+    overflow: hidden;
+}
+.demo_wrap h1 {
+    padding: 50px;
+    position: relative;
+    z-index: 2;
+}
+/* You could use :after - it doesn't really matter */
+.demo_wrap:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.3;
+    background-image: url('{% static 'images/ycli.jpg' %}');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: cover;
+}
+
+</style>
+
+<div class="demo_wrap" style="height: 250px;">
+    <h4 style="padding-top: 147px; text-align: center; font-size: 25px; font-family: 'Varela Round'; font-weight: 550; color: #fff;">YCLI PROGRAMS</h4>
+</div>
+
+<div style="height: 2.3px; background-color: #27AE60;"></div>
+
+
+<!-- page starts -->
         <!-- slider Area Start-->
-        <div class="slider-area ">
+        <!-- <div class="slider-area ">
             <div class="single-slider hero-overly slider-height2 d-flex align-items-center" data-background="{% static 'assets/img/hero/about.jpg' %}">
                 <div class="container">
                     <div class="row">
@@ -25,49 +62,53 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- slider Area End-->
         <div class="container-fluid">
 
-  <div class="row">
 
-    <div class="container" style="padding: 60px;">
+                  <!-- Services Area Start -->
+        <div class="services-area1 section-padding30">
+            <div class="container">
+                <!-- section tittle -->
+                <!-- <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-tittle mb-55">
+                            <div class="front-text">
+                                <h2 class="">Our Programs</h2>
+                            </div>
+                            <span class="back-text">Programs</span>
+                        </div>
+                    </div>
+                </div> -->
 
-      {% for program in programs %}
+                <div class="row">
 
-      <div class="col-md-4">
+                  {% for program in programs %}
 
-         <div class="card mb-4 text-white">
+                    <div class="col-xl-4 col-lg-4 col-md-6">
+                        <div class="single-service-cap mb-30">
+                            <div class="service-img">
+                                <img style="width: 100%; height: 250px;" src="{{ program.photo.url }}" alt="{{ image.title }}">
+                            </div>
+                            <div class="service-cap">
+                                <h4><a href="{% url 'program_detail' program.pk%}">{{ program.title }}</a></h4>
+                                <a href="{% url 'program_detail' program.pk%}" class="more-btn">Read More <i class="ti-plus"></i></a>
+                            </div>
+                            <div class="service-icon">
+                                <img src="assets/img/icon/services_icon1.png" alt="">
+                            </div>
+                        </div>
+                    </div>
 
-            <img style="width: 100%; height: 150px;" src="{{ program.photo.url }}" alt="{{ image.title }}">
+                  {% endfor %}
+                    
+                </div>
 
-            <h6 class="card-header border-success"style="text-align: center;"><strong>{{ program.title }}</strong></h6>
-
-              <div class="card-text" style="color: #000;">
-                
-                <br>
-
-                <p style="font-size: 14px; text-align: center;">{{ program.description | slice:":220" }}...</p>
-
-                <a href="{% url 'program_detail' program.pk%}"><button type="button" class="btn-warning btn-sm btn-block">View Details > <i class="fa fa-hand-o-right"></i></button></a>
-
-              </div>
-               
-          </div>
-
+            </div>
+        </div>
+        <!-- Services Area End -->
+  
       </div>
 
-    {% endfor %}
-      
-    </div>
-
-  </div>
-  
-</div>
-
-
-</main>
-
 {% endblock %}
-<!-- start -->
-

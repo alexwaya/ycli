@@ -1,129 +1,112 @@
 {% load static %}
 
-     <header>
-        <!-- Header Start -->
-       <div class="header-area header-transparent">
-            <div class="main-header ">
-                <div class="header-top d-none d-lg-block">
-                   <div class="container-fluid">
-                       <div class="col-xl-12">
-                            <div class="row d-flex justify-content-between align-items-center">
-                                <div class="header-info-left">
-                                    <ul>     
-                                        <li>+(123) 1234-567-8901</li>
-                                        <li>info@domain.com</li>
-                                        <li>Mon - Sat 8:00 - 17:30, Sunday - CLOSED</li>
-                                    </ul>
-                                </div>
-                                <div class="header-info-right">
-                                    <ul class="header-social">    
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                       <li> <a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+<style type="text/css">
+  /*a {
+    color: #000;
+  }*/
+</style>
 
-                                       <li><a class="" href="/donate/">
-            <button type="button" class="btn-danger btn-sm">DONATE</button>
-          </a></li>
+<div style="">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container" style="padding: 7px;">
 
-                                       
+      <div class="logo">
+          <a href="/"><img src="{% static 'images/ycli.png' %}" style="height: 25px; width: 220px;" alt=""></a>
+      </div>
 
-                                    </ul>
+        <!-- <a class="navbar-brand" href="#">Navbar</a> -->
 
-                                    <!-- <div class="col-xl-2 col-lg-2 col-md-3">
-                                        <div class="header-right-btn f-right d-none d-lg-block">
-                                            <a href="/donate/" class="btn">Donate</a>
-                                        </div>
-                                    </div> -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-                                </div>
-                            </div>
-                       </div>
-                   </div>
-                </div>
-               <div class="header-bottom  header-sticky">
-                    <div class="container-fluid">
-                        <div class="row align-items-center">
-                            <!-- Logo -->
-                            <div class="col-xl-2 col-lg-2 col-md-1">
-                                <div class="logo">
-                                    <!-- logo-1 -->
-                                    <a href="/" class="big-logo"><img src="{% static 'images/ycli.png' %}" alt=""></a>
-                                    <!-- logo-2 -->
-                                    <a href="/" class="small-logo"><img src="{% static 'assets/img/logo/loder-logo.png' %}" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-xl-10 col-lg-10 col-md-10">
-                                <!-- Main-menu -->
-                                <div class="main-menu f-right d-none d-lg-block">
-                                    <nav> 
-                                        <ul id="navigation">                                                                                                                   
-                                            <li style="font-family: Verdana"><a href="/">HOME</a></li>
-                                            <li style="font-family: Verdana"><a href="{% url 'about' %}">ABOUT</a></li>
-                                            <li style="font-family: Verdana"><a href="{% url 'programs' %}">PROGRAMS</a></li>
-                                            <!-- <li><a href="services.html">Services</a></li> -->
-                                            <li style="font-family: Verdana"><a href="#">MEDIA</a>
-                                                <ul class="submenu">
-                                                    <li style="font-family: Verdana"><a href="/events/">EVENTS</a></li>
-                                                    <li style="font-family: Verdana"><a href="/workshops/">WORKSHOPS</a></li>
-                                                </ul>
-                                            </li>
-                                            <!-- <li style="font-family: Verdana"><a href="/workshops/">WORKSHOPS</a> -->
-                                                <!-- <ul class="submenu">
-                                                    <li><a href="elements.html">Element</a></li>
-                                                    <li><a href="project_details.html">Projects Details</a></li>
-                                                    <li><a href="services_details.html">Services Details</a></li>
-                                                </ul> -->
-                                           <!--  </li> -->
-                                            <li style="font-family: Verdana"><a href="{% url 'contact' %}">CONTACT</a></li>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            &nbsp;&nbsp;
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a style="color: #000; font-size: 16px;" class="nav-link" href="{% url 'about' %}">About</a>
+            </li>
+            <li class="nav-item">
+              <a style="color: #000; font-size: 16px;" class="nav-link" href="/programs/">Our Programs</a>
+            </li>
+            <li class="nav-item">
+              <a style="color: #000; font-size: 16px;" class="nav-link" href="/workshops/">Workshops</a>
+            </li>
+            <li class="nav-item">
+              <a style="color: #000; font-size: 16px;" class="nav-link" href="/events/">Events</a>
+            </li>
+            <!-- <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li> -->
+            <!-- <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li> -->
 
-                                            <li style="font-family: Verdana"><a href="{% url 'members' %}">MEMBERS</a></li>
+            <li class="nav-item">
+              <a style="color: #000; font-size: 16px;" class="nav-link" href="/members/">Members</a>
+            </li>
 
-                                            {% if user.is_authenticated %}
+            <li class="nav-item">
+              <a style="color: #000; font-size: 16px;" class="nav-link" href="/contact/">Contact</a>
+            </li>
 
-                                         <li class="nav-item" style="font-family: Verdana">
-                                          <a class="nav-link" href="{% url 'dashboard' %}">
-                                            <button type="button" class=" btn-primary btn-sm">DASHBOARD</button>
-                                          </a>
-                                        </li>
+            
 
-                                        <li class="nav-item" style="font-family: Verdana">
-                                          <a class="nav-link" href="{% url 'logout' %}">
-                                            <button type="button" class="btn-warning btn-sm">LOG OUT</button>
-                                          </a>
-                                        </li>
+          </ul>
+          <!-- <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form> -->
 
-                                        {% else %}
+            <a class="nav-link" href="/donate/">
+                <button type="button" class="btn btn-outline-secondary btn-sm">Donate</button>
+            </a>
 
-                                        <li class="nav-item" style="font-family: Verdana">
-                                          <a class="nav-link" href="{% url 'login' %}">
-                                            <button type="button" class=" btn-primary btn-sm">LOGIN</button>
-                                          </a>
-                                        </li>
+          {% if user.is_authenticated %}
 
-                                        <li class="nav-item" style="font-family: Verdana">
-                                          <a class="nav-link" href="{% url 'signup' %}">
-                                            <button type="button" class=" btn-success btn-sm">REGISTER</button>
-                                          </a>
-                                        </li>
+            <!--  <li class="nav-item"> -->
+              <a class="nav-link" href="{% url 'dashboard' %}">
+                <button type="button" class="btn btn-primary btn-sm">DASHBOARD</button>
+              </a>
+            <!-- </li> -->
 
-                                        {% endif %}
+            <!-- <li class="nav-item"> -->
+              <a class="nav-link" href="{% url 'logout' %}">
+                <button type="button" class="btn btn-warning btn-sm">LOG OUT</button>
+              </a>
+           <!--  </li> -->
 
+            {% else %}
 
+            <!-- <li class="nav-item"> -->
+              <a class="nav-link" href="{% url 'login' %}">
+                <button type="button" class="btn btn-primary btn-sm">LOG IIN</button>
+              </a>
+            <!-- </li> -->
 
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>             
-                            
-                            <!-- Mobile Menu -->
-                            <div class="col-12">
-                                <div class="mobile_menu d-block d-lg-none"></div>
-                            </div>
-                        </div>
-                    </div>
-               </div>
-            </div>
-       </div>
-        <!-- Header End -->
-    </header>
+            <!-- <li class="nav-item"> -->
+              <a class="nav-link" href="{% url 'signup' %}">
+                <button type="button" class="btn btn-success btn-sm">REGISTER</button>
+              </a>
+            <!-- </li> -->
+
+            {% endif %}
+
+            </ul>
+
+        </div>
+
+    </div>
+  </nav>
+</div>

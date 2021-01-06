@@ -5,59 +5,70 @@
 {% load static %}
 
 
-    <main>
-        <!-- slider Area Start-->
-        <div class="slider-area ">
-            <div class="single-slider hero-overly slider-height2 d-flex align-items-center" data-background="{% static 'assets/img/hero/about.jpg' %}">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="hero-cap pt-100">
-                                <h2>About us</h2>
-                                <nav aria-label="breadcrumb ">
-                                    <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                    <li class="breadcrumb-item"><a href="#">About uS</a></li> 
-                                    </ol>
-                                </nav>
-                            </div>
-                        </div>
+<style type="text/css">
+    .demo_wrap {
+    position: relative;
+    background: #000;
+    overflow: hidden;
+}
+.demo_wrap h1 {
+    padding: 50px;
+    position: relative;
+    z-index: 2;
+}
+/* You could use :after - it doesn't really matter */
+.demo_wrap:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.3;
+    background-image: url('{% static 'images/ycli.jpg' %}');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: cover;
+}
+
+</style>
+
+<div class="demo_wrap" style="height: 250px;">
+    <h4 style="padding-top: 147px; text-align: center; font-size: 25px; font-family: 'Varela Round'; font-weight: 550; color: #fff;">WHO WE ARE</h4>
+</div>
+
+<div style="height: 2.3px; background-color: #27AE60;"></div>
+
+
+<!-- page starts -->
+
+
+<div class="container">
+
+    <section class="about-us py-5 " id="about-us">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class='text-success'>Welcome!</h1>
+                    <h2>Know More About Us</h2>
+                    <hr>
+                    <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore etae magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <button type="button" class="btn btn-success">Let's Know More</button>
+
+                </div>
+                <div class="col-md-6">
+                    <div>
+                        <img style="" src="{% static 'images/ycli.jpg' %}" alt="">
                     </div>
+                    
                 </div>
             </div>
         </div>
-        <!-- slider Area End-->
-        <!-- About Area Start -->
-        <section class="support-company-area fix pt-10 section-padding30">
-            <div class="support-wrapper align-items-end">
-                <div class="left-content">
-                    <!-- section tittle -->
-                    <div class="section-tittle section-tittle2 mb-55">
-                        <div class="front-text">
-                            <h2 class="">Who we are</h2>
-                        </div>
-                        <span class="back-text">About us</span>
-                    </div>
-                    <div class="support-caption">
-                        <p class="pera-top">Mollit anim laborum duis au dolor in voluptcate velit ess cillum dolore eu lore dsu quality mollit anim laborumuis au dolor in voluptate velit cillu.</p>
-                        <p>Mollit anim laborum.Dvcuis aute iruxvfg dhjkolohr in re voluptate velit esscillumlore eu quife nrulla parihatur. Excghcepteur sfwsignjnt occa cupidatat non aute iruxvfg dhjinulpadeserunt mollitemnth incididbnt ut;o5tu layjobore mofllit anim.</p>
-                        <a href="about.html" class="btn red-btn2">read more</a>
-                    </div>
-                </div>
-                <div class="right-content">
-                    <!-- img -->
-                    <div class="right-img">
-                        <img src="{% static 'assets/img/gallery/safe_in.png' %}" alt="">
-                    </div>
-                    <div class="support-img-cap text-center">
-                        <span>1994</span>
-                        <p>Since</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- About Area End --> 
-
-</main>
+    </section>
+    
+</div>
 
 {% endblock %}
