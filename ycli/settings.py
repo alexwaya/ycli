@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'workshops',
 
     'donate',
+    'tinymce',
 ]
 
 MIDDLEWARE = [

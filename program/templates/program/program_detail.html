@@ -41,28 +41,6 @@
 
 <div style="height: 2.3px; background-color: #27AE60;"></div>
 
-
-<!-- page starts -->
-        <!-- <div class="slider-area ">
-            <div class="single-slider hero-overly slider-height2 d-flex align-items-center" data-background="{% static 'assets/img/hero/about.jpg' %}">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="hero-cap pt-100">
-                                <h2>Program Details</h2>
-                                <nav aria-label="breadcrumb ">
-                                    <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                    <li class="breadcrumb-item"><a href="#">Program Details</a></li> 
-                                    </ol>
-                                </nav>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <!-- slider Area End-->
        <div class="container-fluid" style="margin-top: 70px; margin-bottom: 70px;">
 
         <div class="row">
@@ -111,7 +89,7 @@
 
                   <div class="col-md-12">
 
-                     <p style="font-size: 14px; text-align: justify;">{{ program.description }}</p>
+                     <p style="font-size: 14px; text-align: justify;">{{ program.description |linebreaksbr }}</p>
 
                   </div>
 

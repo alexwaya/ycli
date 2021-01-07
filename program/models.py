@@ -1,6 +1,9 @@
 from accounts.models import CustomUser
 from django.db import models
 
+# from tinymce.models import HTMLField
+
+
 class Program(models.Model):
 	title = models.CharField(max_length=255)
 	photo = models.ImageField(upload_to='images/', default='attach photo')
