@@ -25,27 +25,6 @@ def apply_program(request, pk):
     return render(request, 'program/apply_for_program.html', context)
 
 
-# def apply_program(request, pk):
-#     program = Program.objects.get(pk=pk)
-
-#     form = CommentForm()
-#     if request.method == 'POST':
-#         form = CommentForm(request.POST)
-#         if form.is_valid():
-#             comment = Comment(author=form.cleaned_data["author"], body=form.cleaned_data["body"], post=post)
-#             comment.save()
-
-#     comments = Comment.objects.filter(post=post)
-
-#     context = {
-#         "post": post,
-#         "comments": comments,
-#         "form": form,
-#     }
-#     return render(request, "news/blog_detail.html", context)
-
-
-
 
 def program_view(request):
     programs = Program.objects.all()[0:3]
@@ -68,6 +47,17 @@ def program_detail(request, pk):
 
 
 
+def program_category(request, category):
+    programs = Program.objects.filter(
+        categories__contains=category
+    ).order_by(
+        '-created_at'
+    )
+    context = {
+        "category": category,
+        "programs": programs
+    }
+    return render(request, "program/program_category.html", context)
 
 
 

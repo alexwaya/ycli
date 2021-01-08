@@ -53,6 +53,14 @@
                 <div class="" style="padding:0 15px;">
                     <p style="font-size: 18px; font-weight: 600;">{{ program.title }}</p>
 
+                    <p style="font-size: 18px;">
+
+                      <a href="{% url 'program_category' program.categories %}">
+                            {{ program.categories }}
+                    </a>
+                      
+                    </p>
+
                     <p style="font-size: 13px;"><b><i class="fa fa-map-marker"></i></b> {{ program.location }}
 
                         &nbsp; <b>From :</b> {{ program.date_from }} 

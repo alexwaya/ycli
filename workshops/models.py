@@ -24,7 +24,23 @@ class Workshop(models.Model):
 	class Meta:
 		verbose_name = "Our Workshop"
 
-    #categories = models.ManyToManyField('NewsCategory', related_name='posts', verbose_name = "County")
+
+
+class Application(models.Model):
+	event = models.ForeignKey(Workshop, related_name='workshops', on_delete=models.CASCADE)
+
+	name = models.CharField(max_length=255)
+	email = models.CharField(max_length=255)
+	phone = models.CharField(max_length=255)
+
+	country = models.CharField(max_length=255)
+
+	content = models.TextField()
+	experience = models.TextField()
+
+	#created_by = models.ForeignKey(CustomUser, related_name='applications', on_delete=models.CASCADE)
+	created_at = models.DateTimeField(auto_now_add=True)
+
 
 
 class Comment(models.Model):
