@@ -33,10 +33,13 @@ class CustomUserCreationForm(UserCreationForm):
             'mission',
 
             'username',
-            # 'email',
-            # 'org_name',
 
-            # 'phone',
+            'photo',
+
+            'twitter',
+            'linkedin',
+            'facebook',
+            'instagram',
 
             
             )

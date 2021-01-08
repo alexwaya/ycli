@@ -11,6 +11,17 @@ def members_directory(request):
     return render(request, "members.html", context)
     
 
+def members_detail(request, pk):
+    post = CustomUser.objects.get(pk=pk)
+    context = {
+        "post": post,
+        }
+
+    return render(request, 'members_detail.html', context)
+
+    
+
+
 def home_view(request):
     return render(request, 'home.html')
 

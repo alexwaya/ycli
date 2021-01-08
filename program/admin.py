@@ -7,8 +7,10 @@ from .models import Program, Application
 class ProgramAdmin(admin.ModelAdmin):
     list_display = [
 
-    		'title', 
-        	'created_by',
+    		'title',
+    		'location',
+    		'date_from',
+    		'date_to',
         	'created_at', 
     ]
 

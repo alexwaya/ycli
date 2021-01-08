@@ -6,6 +6,9 @@ from django.db import models
 
 class Program(models.Model):
 	title = models.CharField(max_length=255)
+	location = models.CharField(max_length=255)
+	date_from = models.DateTimeField()
+	date_to = models.DateTimeField()
 	photo = models.ImageField(upload_to='images/', default='attach photo')
 	description = models.TextField()
 

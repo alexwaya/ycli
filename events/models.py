@@ -11,12 +11,14 @@ from django.db import models
 
 class Event(models.Model):
 	
+	title = models.CharField(max_length=255)
+	location = models.CharField(max_length=255)
+	date_from = models.DateTimeField()
+	date_to = models.DateTimeField()
 	photo = models.ImageField(upload_to='images/', default='attach photo')
-	title = models.CharField(max_length=1024, verbose_name = "Event's Name")
-	#categories = models.ManyToManyField('Category', related_name='posts', verbose_name = "Event Name")
 	description = models.TextField()
 
-	created_on = models.DateTimeField(auto_now_add=True)
+	created_at = models.DateTimeField(auto_now_add=True)
 	last_modified = models.DateTimeField(auto_now=True)
 
 	class Meta:

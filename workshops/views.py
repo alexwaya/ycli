@@ -12,8 +12,16 @@ from .models import Workshop
 
 
 def workshops_index(request):
-    posts = Workshop.objects.all().order_by('-created_on')
+    posts = Workshop.objects.all().order_by('-created_at')
     context = {
         "posts": posts,
     }
     return render(request, "workshops/workshops_index.html", context)
+
+def workshops_detail(request, pk):
+    post = Workshop.objects.get(pk=pk)
+    context = {
+        "post": post,
+        }
+
+    return render(request, 'workshops/workshops_detail.html', context)

@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}Program Details{% endblock %}
+{% block title %}Event Details{% endblock %}
 {% block content %}
 {% load static %}
 
@@ -36,7 +36,7 @@
 </style>
 
 <div class="demo_wrap" style="height: 250px;">
-    <h4 style="padding-top: 147px; text-align: center; font-size: 25px; font-family: 'Varela Round'; font-weight: 550; color: #fff;">PROGRAM DETAILS</h4>
+    <h4 style="padding-top: 147px; text-align: center; font-size: 25px; font-family: 'Varela Round'; font-weight: 550; color: #fff;">EVENT DETAILS</h4>
 </div>
 
 <div style="height: 2.3px; background-color: #27AE60;"></div>
@@ -48,30 +48,30 @@
     <div class="row">
         <div class="col-md-8">
             <div class="heading" style="background-color: #EAEDED;padding-bottom: 10px;">
-                <img style="width: 100%; height: 450px;" src="{{ program.photo.url }}" alt="">
+                <img style="width: 100%; height: 450px;" src="{{ post.photo.url }}" alt="">
                 <hr>
                 <div class="" style="padding:0 15px;">
-                    <p style="font-size: 18px; font-weight: 600;">{{ program.title }}</p>
+                    <p style="font-size: 18px; font-weight: 600;">{{ post.title }}</p>
 
-                    <p style="font-size: 13px;"><b><i class="fa fa-map-marker"></i></b> {{ program.location }}
+                    <p style="font-size: 13px;"><b><i class="fa fa-map-marker"></i></b> {{ post.location }}
 
-                        &nbsp; <b>From :</b> {{ program.date_from }} 
-                        &nbsp; <b>To :</b> {{ program.date_to }}
+                        &nbsp; <b>From :</b> {{ post.date_from }} 
+                        &nbsp; <b>To :</b> {{ post.date_to }}
                     </p>
                 </div>
 
             </div>
             <div class="body" style="padding: 10px;">
-                <p style="font-size: 14px;">{{ program.description | linebreaks }}</p>
+                <p style="font-size: 14px;">{{ post.description | linebreaks }}</p>
             </div>
         </div>
 
         <div class="col-md-4">
             <div style="background-color: #EAEDED; padding: 15px; border-radius: 5px; text-align: left;">
-                <p style="font-size: 18px; font-weight: 600;">Register for program</p>
+                <p style="font-size: 18px; font-weight: 600;">Register for event</p>
                 <hr>
                 <p style="font-size: 15px;">Come, engage, learn, and build networks with our diverse community</p>
-                <a href="{% url 'apply_program' program.pk %}"><button type="button" class="btn btn-success btn-sm btn-block">Apply Now <i class="fa fa-hand-o-right"></i></button></a>
+                <a href="#"><button type="button" class="btn btn-success btn-sm btn-block">Register Now <i class="fa fa-hand-o-right"></i></button></a>
                 
             </div>
             

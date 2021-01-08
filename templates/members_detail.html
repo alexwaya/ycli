@@ -1,0 +1,147 @@
+{% extends 'base.html' %}
+
+{% block title %}Organization Details{% endblock %}
+{% block content %}
+{% load static %}
+
+
+<style type="text/css">
+    .demo_wrap {
+    position: relative;
+    background: #000;
+    overflow: hidden;
+}
+.demo_wrap h1 {
+    padding: 50px;
+    position: relative;
+    z-index: 2;
+}
+/* You could use :after - it doesn't really matter */
+.demo_wrap:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.3;
+    background-image: url('{% static 'images/ycli.jpg' %}');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: cover;
+}
+
+</style>
+
+<div class="demo_wrap" style="height: 250px;">
+    <h4 style="padding-top: 147px; text-align: center; font-size: 25px; font-family: 'Varela Round'; font-weight: 550; color: #fff;">ORGANIZATION DETAILS</h4>
+</div>
+
+<div style="height: 2.3px; background-color: #27AE60;"></div>
+
+
+<!-- all -->
+<div>
+    <div class="container" style="padding:70px 0;">
+
+        <div class="row">
+            <div style="text-align: justify; padding:0 30px; ">
+                <h4>NAME: {{ post.org_name | upper }}</h4>
+
+            </div>
+        </div>
+                <hr>
+        <div class="row">
+
+            <div class="col-md-4" style="background-color: #1F618D; padding: 40px 20px;">
+                <div class="image" style="">
+                    <img style="width: 200px; height: 200px; display: block; margin: auto; border-radius: 50%; border: 3px solid #fff;" src="{{ post.photo.url }}" alt="">
+                </div>
+
+                <div class="social">
+                    <hr>
+                    
+                </div>
+
+                <div class="mission" style="text-align: center; color: #fff;">
+                    <h6>MISSION STATEMENT</h6>
+                    <p>{{ post.mission }}</p>
+                </div>
+            </div>
+
+            <div class="col-md-8">
+                
+                <div class="col">
+                    <table class="table table-bordered">
+                          <tbody>
+                            <tr>
+                              <th scope="row">Type</th>
+                              <td>{{ post.org_type }}</td>
+                            </tr>
+
+                            <tr>
+                              <th scope="row">Country</th>
+                              <td>{{ post.org_country }}</td>
+                            </tr>
+
+                            <tr>
+                              <th scope="row">City/Town</th>
+                              <td>{{ post.org_city }}</td>
+                            </tr>
+
+                            <tr>
+                              <th scope="row">Areas of Focus</th>
+                              <td>{{ post.area_of_focus }}</td>
+                            </tr>
+
+                            <tr>
+                              <th scope="row">Number of Staff</th>
+                              <td>{{ post.staff_no }}</td>
+                            </tr>
+
+                            <tr>
+                              <th scope="row">Email Address</th>
+                              <td>{{ post.org_email }}</td>
+                            </tr>
+
+                            <tr>
+                              <th scope="row">Website</th>
+                              <td>{{ post.org_website }}</td>
+                            </tr>
+
+                            <tr>
+                              <th scope="row">Name</th>
+                              <td>{{ post.person_name }}</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Position/Designation</th>
+                              <td>{{ post.person_org_title }}</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Email Address</th>
+                              <td>{{ post.person_email }}</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Phone Number</th>
+                              <td>{{ post.person_phone }}</td>
+                            </tr>
+
+                          </tbody>
+                    </table>
+                </div>
+                
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- end -->
+
+
+{% endblock %}
+
+
+
+

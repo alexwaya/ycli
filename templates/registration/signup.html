@@ -44,7 +44,7 @@
 <div class="container" style="margin-top: 80px;">
   
     <div class="col">
-    <form method="post">
+    <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
 
         <div class="row">
@@ -189,6 +189,53 @@
           </div>
         </div>
       </div>
+
+
+      <div class="row">
+        
+        <div class="col">
+          <div class="form-group">
+              <label for="exampleInputEmail1">Logo</label>
+
+              <input  type="file" class="form-control" name="photo" aria-describedby="emailHelp" placeholder="" required>
+          </div>
+        </div>
+
+      </div>
+
+
+
+      <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Instagram</label>
+            <input type="text" class="form-control" name="instagram" aria-describedby="emailHelp" placeholder="Instagram" >
+        </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+              <label for="exampleInputEmail1">Facebook</label>
+
+              <input  type="text" class="form-control" name="facebook" aria-describedby="emailHelp" placeholder="Facebook" >
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+              <label for="exampleInputEmail1">LinkeIn</label>
+
+              <input  type="text" class="form-control" name="linkedin" aria-describedby="emailHelp" placeholder="LinkeIn" >
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+              <label for="exampleInputEmail1">Twitter</label>
+
+              <input  type="text" class="form-control" name="twitter" aria-describedby="emailHelp" placeholder="Twitter">
+          </div>
+        </div>
+      </div>
+
+
 
       <div class="row">
         <div class="col">

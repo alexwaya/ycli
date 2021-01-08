@@ -36,79 +36,56 @@
 </style>
 
 <div class="demo_wrap" style="height: 250px;">
-    <h4 style="padding-top: 147px; text-align: center; font-size: 25px; font-family: 'Varela Round'; font-weight: 550; color: #fff;">YCLI PROGRAMS</h4>
+    <h4 style="padding-top: 147px; text-align: center; font-size: 25px; font-family: 'Varela Round'; font-weight: 550; color: #fff;">OUR PROGRAMS</h4>
 </div>
 
 <div style="height: 2.3px; background-color: #27AE60;"></div>
 
 
-<!-- page starts -->
-        <!-- slider Area Start-->
-        <!-- <div class="slider-area ">
-            <div class="single-slider hero-overly slider-height2 d-flex align-items-center" data-background="{% static 'assets/img/hero/about.jpg' %}">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="hero-cap pt-100">
-                                <h2>Programs</h2>
-                                <nav aria-label="breadcrumb ">
-                                    <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                    <li class="breadcrumb-item"><a href="#">Programs</a></li> 
-                                    </ol>
-                                </nav>
-                            </div>
-                        </div>
+<div class="container" style="text-align: center; padding-top: 70px; padding-bottom: 50px;">
+    <div class="row">
+        {% for program in programs %}
+        <div class="col-md-4 border-dark">
+            <div class="card mb-4" style="border: 1px solid #154360;">
+                <img style="width: 100%; height: 220px;" src="{{ program.photo.url }}" alt="">
+                <div class="card-body">
+                   <p class="card-title"><a style="font-size: 17px; font-weight: 600" href="{% url 'program_detail' program.pk%}">{{ program.title }}</a></p><hr>
+                   
+                   <table class="table table-sm table-borderless" style="text-align: left; font-size: 13px;">
+                      <tbody>
+                        <tr>
+                          <th scope="row">Location</th>
+                          <td  style="">{{ program.location }}</td>
+                        </tr>
+
+                        <tr>
+                          <th scope="row">From</th>
+                          <td  style="">{{ program.date_from }}</td>
+                        </tr>
+
+                        <tr>
+                          <th scope="row">To</th>
+                          <td  style="">{{ program.date_to }}</td>
+                        </tr>
+
+                      </tbody>
+                    </table>
+
+                    <div style="text-align: center;">
+                        <a href="{% url 'program_detail' program.pk%}"><button type="button" class="btn btn-outline-primary btn-sm btn-block">Program Details <i class="fa fa-hand-o-right"></i></button></a>
                     </div>
+
                 </div>
-            </div>
-        </div> -->
-        <!-- slider Area End-->
-        <div class="container-fluid">
-
-
-                  <!-- Services Area Start -->
-        <div class="services-area1 section-padding30">
-            <div class="container">
-                <!-- section tittle -->
-                <!-- <div class="row">
-                    <div class="col-lg-12">
-                        <div class="section-tittle mb-55">
-                            <div class="front-text">
-                                <h2 class="">Our Programs</h2>
-                            </div>
-                            <span class="back-text">Programs</span>
-                        </div>
-                    </div>
-                </div> -->
-
-                <div class="row">
-
-                  {% for program in programs %}
-
-                    <div class="col-xl-4 col-lg-4 col-md-6">
-                        <div class="single-service-cap mb-30">
-                            <div class="service-img">
-                                <img style="width: 100%; height: 250px;" src="{{ program.photo.url }}" alt="{{ image.title }}">
-                            </div>
-                            <div class="service-cap">
-                                <h4><a href="{% url 'program_detail' program.pk%}">{{ program.title }}</a></h4>
-                                <a href="{% url 'program_detail' program.pk%}" class="more-btn">Read More <i class="ti-plus"></i></a>
-                            </div>
-                            <div class="service-icon">
-                                <img src="assets/img/icon/services_icon1.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-
-                  {% endfor %}
-                    
-                </div>
-
             </div>
         </div>
-        <!-- Services Area End -->
-  
-      </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+
+
+
 
 {% endblock %}
+

@@ -3,11 +3,11 @@ from django.db import models
 
 class CustomUser(AbstractUser):
     org_name     = models.CharField(max_length=30, default="Organization", help_text='Organization Name.')
-    
+    photo = models.ImageField(upload_to='images/', default='attach photo')
     #company contact details
     org_email		= 	models.CharField(max_length=100)
     org_phone		= 	models.CharField(max_length=100)
-    org_website		= 	models.CharField(max_length=100)
+    org_website		= 	models.CharField(max_length=100, blank=True)
     org_address		= 	models.CharField(max_length=100)
     org_city		= 	models.CharField(max_length=100)
     org_country		= 	models.CharField(max_length=100)
@@ -32,6 +32,11 @@ class CustomUser(AbstractUser):
 
     #categories 		= models.CharField(max_length=20, default="Kitui")
     date_joined    	= models.DateTimeField(verbose_name="date Joined", auto_now_add=True)
+
+    instagram       = models.CharField(max_length=100, blank=True)
+    facebook        = models.CharField(max_length=100, blank=True)
+    linkedin        = models.CharField(max_length=100, blank=True)
+    twitter         = models.CharField(max_length=100, blank=True)
 
     def __str__(self):
         return self.org_name
