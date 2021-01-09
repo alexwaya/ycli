@@ -36,77 +36,84 @@
 </style>
 
 <div class="demo_wrap" style="height: 250px;">
-    <h4 style="padding-top: 165px; text-align: center; font-size: 25px; font-family: 'Varela Round'; font-weight: 550; color: #fff;">Apply for Program</h4>
+    <h4 style="padding-top: 165px; text-align: center; font-size: 25px; font-family: 'Varela Round'; font-weight: 550; color: #fff;">APPLY FOR PROGRAM</h4>
 </div>
 
 <div style="height: 2.3px; background-color: #27AE60;"></div>
 
-
-<!-- page starts -->
-        <!-- slider Area Start-->
-        <div class="slider-area ">
-            <div class="single-slider hero-overly slider-height2 d-flex align-items-center" data-background="{% static 'assets/img/hero/about.jpg' %}">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="hero-cap pt-100">
-                                <h2>Apply For Grant</h2>
-                                <nav aria-label="breadcrumb ">
-                                    <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                    <li class="breadcrumb-item"><a href="#">Apply</a></li> 
-                                    </ol>
-                                </nav>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <!-- slider Area End-->
-        <div class="container-fluid">
-          <div class="row">
+<div class="container-fluid">
+  <div class="row">
 
-            <div class="container">
+<div class="container" style="padding: 70px 0;">
+    
     <div class="row">
-        <br>
-        <br>
-    </div>
-    <div class="row">
-
-        <div class="col-md-5">
-          
-        </div>
-
         
-        <div class="col-md-7">
+        <div class="col-md-12">
 
           <h6 style="color: #000;">Fill the form below to apply.</h6>
 
           <hr>
 
-
             <form method="post" enctype="multipart/form-data">
-              {% csrf_token %}
-              <table border="1">
-                {{ form }}
-              </table>
-              <button type="submit">Submit</button>
-            </form>
-
-
-
-            <!-- <form method="post">
 
                 {% csrf_token %}
+
+                <div class="row">
+                    <div class="col">
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Your Full Name</label>
+                        <input type="text" class="form-control" name="full_name" aria-describedby="emailHelp" placeholder="Your Full Name" required>
+                    </div>
+                    </div>
+                    <div class="col">
+                      <div class="form-group">
+                          <label for="exampleInputEmail1">Company Name</label>
+
+                          <input  type="text" class="form-control" name="company" aria-describedby="emailHelp" placeholder="Company Name" required>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Email Address</label>
+                        <input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="Email Address" required>
+                    </div>
+                    </div>
+                    <div class="col">
+                      <div class="form-group">
+                          <label for="exampleInputEmail1">Website</label>
+
+                          <input  type="text" class="form-control" name="website" aria-describedby="emailHelp" placeholder="Website" required>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Country</label>
+                        <input type="text" class="form-control" name="country" aria-describedby="emailHelp" placeholder="Country" required>
+                    </div>
+                    </div>
+                    <div class="col">
+                      <div class="form-group">
+                          <label for="exampleInputEmail1">City/Region/Town</label>
+
+                          <input  type="text" class="form-control" name="city" aria-describedby="emailHelp" placeholder="City/Region/Town" required>
+                      </div>
+                    </div>
+                </div>
 
 
                 <div class="row">
                   <div class="col-md-12">
                     <div class="form-group">
-                      <label for="exampleInputEmail1">Content</label>
+                      <label for="exampleInputEmail1">Why is the program you are applying for important to you?</label>
 
-                      <textarea type="text" class="form-control" aria-describedby="emailHelp" rows="4" cols="55" name="content" placeholder="Content" required></textarea>
+                      <textarea type="text" class="form-control" aria-describedby="emailHelp" rows="4" cols="55" name="importance" placeholder="Why is the program you are applying for important to you?" required></textarea>
 
                   </div>
                   </div>
@@ -116,11 +123,24 @@
                 <div class="row">
                   <div class="col-md-12">
                     <div class="form-group">
-                      <label for="exampleInputEmail1">Experience</label>
+                      <label for="exampleInputEmail1">Description of your youth programs</label>
 
-                      <textarea type="text" class="form-control" aria-describedby="emailHelp" rows="4" cols="55" name="experience" placeholder="Experience" required></textarea>
+                      <textarea type="text" class="form-control" aria-describedby="emailHelp" rows="4" cols="55" name="description" placeholder="Description of your youth programs" required></textarea>
                   </div>
                   </div>
+                </div>
+
+
+                <div class="row">
+        
+                    <div class="col">
+                      <div class="form-group">
+                          <label for="exampleInputEmail1">Photo of to show programs you have done</label>
+
+                          <input  type="file" class="form-control" name="photo" aria-describedby="emailHelp" placeholder="" required>
+                      </div>
+                    </div>
+
                 </div>
 
                 
@@ -129,7 +149,7 @@
                 <button type="submit" class="btn btn-success btn-block">Submit Application</button>
               </div>
 
-            </form> -->
+            </form>
         </div>
     </div>
     </div>

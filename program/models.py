@@ -32,6 +32,9 @@ class Program(models.Model):
 	created_at = models.DateTimeField(auto_now_add=True)
 	changed_at = models.DateTimeField(auto_now=True)
 
+	class Meta:
+		verbose_name = "All Program"
+
 
 class Application(models.Model):
 	program = models.ForeignKey(Program, related_name='applications', on_delete=models.CASCADE)
@@ -52,6 +55,9 @@ class Application(models.Model):
 	created_by = models.ForeignKey(CustomUser, related_name='applications', on_delete=models.CASCADE)
 	created_at = models.DateTimeField(auto_now_add=True)
 	#changed_at = models.DateTimeField(auto_now=True)
+
+	class Meta:
+		verbose_name = "Program Registration"
 
 
 class Post(models.Model):

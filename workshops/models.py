@@ -41,6 +41,9 @@ class Application(models.Model):
 	#created_by = models.ForeignKey(CustomUser, related_name='applications', on_delete=models.CASCADE)
 	created_at = models.DateTimeField(auto_now_add=True)
 
+	class Meta:
+		verbose_name = "Workshop Registration"
+
 
 
 class Comment(models.Model):

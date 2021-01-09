@@ -156,8 +156,19 @@ STATIC_ROOT  = os.path.join(BASE_DIR, 'staticfiles')
 
 
 # Base url to serve media files
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'atgthegeek',
+    'API_KEY': '529172932536759',
+    'API_SECRET': 'TztAhyGFfSBUbxB_XAuKWoK1Te8',
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+
 
 
 # Activate Django-Heroku.

@@ -42,23 +42,67 @@
 <div style="height: 2.3px; background-color: #27AE60;"></div>
 
 
-<div class="container" style="text-align: center; padding-top: 70px; padding-bottom: 50px;">
+<div class="container-fluid">
+  <div class="row">
+
+<div class="container" style="padding: 70px 0;">
+    
     <div class="row">
         
-        <form method="post" novalidate>
-          {% csrf_token %}
-          <table border="1">
-            {{ form }}
-          </table>
-          <button type="submit">Submit</button>
-        </form>
+        <div class="col-md-12">
 
+          <h6 style="color: #000;">Fill the form below to register.</h6>
+
+            <hr>
+
+            <form method="post" enctype="multipart/form-data">
+
+                {% csrf_token %}
+
+                <div class="row">
+                    <div class="col">
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Your Full Name</label>
+                        <input type="text" class="form-control" name="name" aria-describedby="emailHelp" placeholder="Your Full Name" required>
+                    </div>
+                    </div>
+                    <div class="col">
+                      <div class="form-group">
+                          <label for="exampleInputEmail1">Nationality</label>
+
+                          <input  type="text" class="form-control" name="country" aria-describedby="emailHelp" placeholder="Nationality" required>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Email Address</label>
+                        <input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="Email Address" required>
+                    </div>
+                    </div>
+                    <div class="col">
+                      <div class="form-group">
+                          <label for="exampleInputEmail1">Phone Number</label>
+
+                          <input  type="text" class="form-control" name="phone" aria-describedby="emailHelp" placeholder="Website" required>
+                      </div>
+                    </div>
+                </div>
+ 
+
+              <div class="form-group">
+                <button type="submit" class="btn btn-success btn-block">Submit Registration</button>
+              </div>
+
+            </form>
+        </div>
     </div>
-</div>
+    </div>
 
-
-
-
+          </div>
+        </div>
 
 
 {% endblock %}

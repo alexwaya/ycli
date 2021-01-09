@@ -11,16 +11,18 @@ class EventAdmin(admin.ModelAdmin):
         	'created_at', 
     ]
 
-# class CategoryAdmin(admin.ModelAdmin):
-#     pass
-
-admin.site.register(Event, EventAdmin)
-#admin.site.register(Category, CategoryAdmin)
-
 
 class ApplicationAdmin(admin.ModelAdmin):
-	pass
+	    list_display = [
 
-#admin.site.register(Post, PostAdmin)
-#admin.site.register(Program, ProgramAdmin)
+		'name',
+		'email',
+		
+		'phone',
+		'country',
+
+]
+
+
+admin.site.register(Event, EventAdmin)
 admin.site.register(Application, ApplicationAdmin)

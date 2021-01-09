@@ -1,8 +1,6 @@
 from django.contrib import admin
 from .models import Program, Application
 
-# class PostAdmin(admin.ModelAdmin):
-#     pass
 
 class ProgramAdmin(admin.ModelAdmin):
     list_display = [
@@ -15,8 +13,18 @@ class ProgramAdmin(admin.ModelAdmin):
     ]
 
 class ApplicationAdmin(admin.ModelAdmin):
-	pass
+    list_display = [
 
-#admin.site.register(Post, PostAdmin)
+		'full_name',
+		'company',
+
+		'email',
+		'website',
+    	'country',
+
+    	'city',
+]
+
+
 admin.site.register(Program, ProgramAdmin)
 admin.site.register(Application, ApplicationAdmin)

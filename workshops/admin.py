@@ -11,15 +11,18 @@ class WorkshopAdmin(admin.ModelAdmin):
         	'created_at', 
     ]
 
-# class CategoryAdmin(admin.ModelAdmin):
-#     pass
-
-admin.site.register(Workshop, WorkshopAdmin)
-#admin.site.register(Category, CategoryAdmin)
 
 class ApplicationAdmin(admin.ModelAdmin):
-	pass
+		    list_display = [
 
-#admin.site.register(Post, PostAdmin)
-#admin.site.register(Program, ProgramAdmin)
+		'name',
+		'email',
+		
+		'phone',
+		'country',
+		
+]
+
+
+admin.site.register(Workshop, WorkshopAdmin)
 admin.site.register(Application, ApplicationAdmin)
