@@ -8,8 +8,18 @@ class ApplicationForm(forms.ModelForm):
 
         fields = (
 
-            'content',
-            'experience',
+            'full_name',
+            'company',
+            'email',
+            'website',
+
+            'country',
+            'city',
+
+            'description',
+            'importance',
+
+            'photo',
 
             )
 

@@ -36,7 +36,7 @@
 </style>
 
 <div class="demo_wrap" style="height: 250px;">
-    <h4 style="padding-top: 147px; text-align: center; font-size: 25px; font-family: 'Varela Round'; font-weight: 550; color: #fff;">Apply for Program</h4>
+    <h4 style="padding-top: 165px; text-align: center; font-size: 25px; font-family: 'Varela Round'; font-weight: 550; color: #fff;">Apply for Program</h4>
 </div>
 
 <div style="height: 2.3px; background-color: #27AE60;"></div>
@@ -85,7 +85,18 @@
 
           <hr>
 
-            <form method="post">
+
+            <form method="post" enctype="multipart/form-data">
+              {% csrf_token %}
+              <table border="1">
+                {{ form }}
+              </table>
+              <button type="submit">Submit</button>
+            </form>
+
+
+
+            <!-- <form method="post">
 
                 {% csrf_token %}
 
@@ -118,7 +129,7 @@
                 <button type="submit" class="btn btn-success btn-block">Submit Application</button>
               </div>
 
-            </form>
+            </form> -->
         </div>
     </div>
     </div>

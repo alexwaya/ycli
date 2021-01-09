@@ -9,7 +9,7 @@ def apply_program(request, pk):
     program = Program.objects.get(pk=pk)
     form = ApplicationForm()
     if request.method == 'POST':
-        form = ApplicationForm(request.POST)
+        form = ApplicationForm(request.POST, request.FILES)
         if form.is_valid():
             application = form.save(commit=False)
             application.program = program
