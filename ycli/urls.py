@@ -57,4 +57,4 @@ if settings.DEBUG: # new
 
 admin.site.site_header = "YCLI"
 admin.site.site_title = "YCLI"
-admin.site
+admin.site.index_title = ""
