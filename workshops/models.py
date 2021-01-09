@@ -27,7 +27,7 @@ class Workshop(models.Model):
 
 
 class Application(models.Model):
-	event = models.ForeignKey(Workshop, related_name='workshops', on_delete=models.CASCADE)
+	workshop = models.ForeignKey(Workshop, related_name='workshops', on_delete=models.CASCADE)
 
 	name = models.CharField(max_length=255)
 	email = models.CharField(max_length=255)
@@ -35,8 +35,8 @@ class Application(models.Model):
 
 	country = models.CharField(max_length=255)
 
-	content = models.TextField()
-	experience = models.TextField()
+	# content = models.TextField()
+	# experience = models.TextField()
 
 	#created_by = models.ForeignKey(CustomUser, related_name='applications', on_delete=models.CASCADE)
 	created_at = models.DateTimeField(auto_now_add=True)

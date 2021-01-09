@@ -6,9 +6,11 @@ from django.db import models
 PROGRAM_TYPES = [
 
     ('Youth Programs for organizations', 'Youth Programs for organizations'),
+
     ('Capacity Building for youth Networks and Movements', 'Capacity Building for youth Networks and Movements'),
     
     ('Youth for Culture and Heritage', 'Youth for Culture and Heritage'),
+    
     ('YCLI Mentorship Program', 'YCLI Mentorship Program'),
 
     ('Leadership Training Programs', 'Leadership Training Programs'),

@@ -64,7 +64,7 @@
                       <tbody>
                         <tr>
                           <th scope="row">Location</th>
-                          <td  style="">{{ post.location }}</td>
+                          <td  style="font-size: 17px; font-weight: 600;">{{ post.location }}</td>
                         </tr>
 
                         <tr>
@@ -81,7 +81,8 @@
                     </table>
 
                     <div style="text-align: center;">
-                        <button type="button" class="btn btn-outline-primary btn-sm btn-block">Workshop Details <i class="fa fa-hand-o-right"></i></button>
+                        
+                        <a href="{% url 'workshops_detail' post.pk%}"><button type="button" class="btn btn-outline-primary btn-sm btn-block">Workshop Details <i class="fa fa-hand-o-right"></i></button></a>
                     </div>
 
                 </div>

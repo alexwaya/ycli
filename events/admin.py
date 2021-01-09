@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Event
+from .models import Event, Application
 
 class EventAdmin(admin.ModelAdmin):
     list_display = [
@@ -16,3 +16,11 @@ class EventAdmin(admin.ModelAdmin):
 
 admin.site.register(Event, EventAdmin)
 #admin.site.register(Category, CategoryAdmin)
+
+
+class ApplicationAdmin(admin.ModelAdmin):
+	pass
+
+#admin.site.register(Post, PostAdmin)
+#admin.site.register(Program, ProgramAdmin)
+admin.site.register(Application, ApplicationAdmin)

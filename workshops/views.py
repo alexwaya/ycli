@@ -1,14 +1,52 @@
-from django.shortcuts import render
-
-# Create your views here.
-# def blog_index(request):
-#     return render(request, 'workshops/blog_index.html')
-
+from django.shortcuts import render, redirect
 
 from .models import Workshop
+from .forms import WorkshopsForm
 
-# def events_index(request):
-#     return render(request, 'events/events_index.html')
+
+def apply_workshop(request, pk):
+    workshop = Workshop.objects.get(pk=pk)
+    form = WorkshopsForm()
+    if request.method == 'POST':
+        form = WorkshopsForm(request.POST)
+        if form.is_valid():
+            application = form.save(commit=False)
+            application.workshop = workshop
+            application.created_by = request.user
+            application.save()
+            return redirect('home')
+        else:
+            form = WorkshopsForm()
+    context = {
+        "workshop": workshop,
+        "form": form,
+        }
+    return render(request, 'workshops/apply_for_workshop.html', context)
+
+# def apply_workshop(request, pk):
+#     workshop = Workshop.objects.get(pk=pk)
+#     form = WorkshopsForm()
+#     if request.method == 'POST':
+#         form = WorkshopsForm(request.POST)
+#         if form.is_valid():
+#             application = form.save(commit=False)
+#             application.workshop = workshop
+#             application.created_by = request.user
+#             application.save()
+#             return redirect('home')
+#         else:
+#             form = WorkshopsForm()
+#     context = {
+#         "workshop": workshop,
+#         "form": form,
+#         }
+#     return render(request, 'workshops/apply_for_workshop.html', context)
+
+
+
+
+
+
 
 
 def workshops_index(request):
