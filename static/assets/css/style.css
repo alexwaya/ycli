@@ -369,11 +369,12 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 60vh;
-  background: url("../img/bana.jpeg") center center;
+  background: url("../img/bana.jpg") center center;
   background-size: cover;
   position: relative;
   z-index: 1;
   padding: 0;
+
   /*margin-bottom: -120px;*/
 }
 
