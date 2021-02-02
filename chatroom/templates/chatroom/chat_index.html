@@ -1,0 +1,33 @@
+{% extends 'accounts/dashboard.html' %}
+
+{% block title %}All Issues Raised{% endblock %}
+{% block dashboard_content %}
+{% load static %}
+
+<div class="container-fluid">
+    <h5 class="mt-4">Dashboard</h5>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item active">Hello {{ request.user | title }}, you have applied for the following programs</li>
+    </ol>
+
+    <div class="container">
+
+        <div class="col-md-8 offset-md-2">
+            <h1>Blog Index</h1>
+            <hr>
+            {% for post in posts %}
+            <h2><a href="{% url 'chat_detail' post.pk%}">{{ post.title }}</a></h2>
+
+            <small>
+                {{ post.created_on.date }} |&nbsp;
+            </small>
+
+            <p>{{ post.body | slice:":400" }}...</p>
+            {% endfor %}
+        </div>
+
+    </div>
+    
+</div>
+
+{% endblock %}

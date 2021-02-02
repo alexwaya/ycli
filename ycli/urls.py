@@ -48,6 +48,8 @@ urlpatterns = [
     path("members/", members_directory, name="members"),
 
     path("members/directory/<int:pk>/", members_detail, name="members_detail"),
+
+    path("dashboard/chatroom/", include("chatroom.urls")),
 ]
 
 

@@ -15,7 +15,7 @@ def apply_program(request, pk):
             application.program = program
             application.created_by = request.user
             application.save()
-            return redirect('dashboard')
+            return redirect('my-applications')
         else:
             form = ApplicationForm()
     context = {

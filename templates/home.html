@@ -5,68 +5,72 @@
 {% load static %}
 
 
-<style type="text/css">
-    .demo_wrap {
-    position: relative;
-    background: #000;
-    overflow: hidden;
-}
-.demo_wrap h1 {
-    padding: 50px;
-    position: relative;
-    z-index: 2;
-}
-/* You could use :after - it doesn't really matter */
-.demo_wrap:before {
-    content: ' ';
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    opacity: 0.3;
-    background-image: url('{% static 'images/ycli4.jpeg' %}');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-}
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="container" data-aos="fade-in">
+      <h1>Welcome to YCLI</h1>
+      <h2>Let's together raise a young generation that serves with excellence, protecting the future and fulfilling god-given dreams</h2>
+      <div class="d-flex align-items-center">
+        <i class="bx bxs-right-arrow-alt get-started-icon"></i>
+        <a href="#" class="btn-get-started scrollto">Get Started</a>
+      </div>
+    </div>
+  </section><!-- End Hero -->
 
-</style>
+  <main id="main">
 
-<div class="demo_wrap" style="height: 520px;">
-    <h4 style="padding-top: 250px; text-align: center; font-size: 25px; font-family: 'Varela Round'; font-weight: 550; color: #fff;">LET'S TOGETHER RAISE A YOUNG GENERATION THAT <br> SERVES WITH EXCELLENCE, PROTECTING THE FUTURE AND <br>FULFILLING GOD-GIVEN DREAMS</h4>
-    <hr>
-</div>
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us">
+      <div class="container">
 
-<div style="height: 2.3px; background-color: #27AE60;"></div>
-
-<!-- <div class="container">
-
-    <section class="about-us py-5 " id="about-us">
-        <div class="container mt-5">
-            <div class="row">
-                <div class="col-md-6">
-                    <h1 class='text-success'>Welcome!</h1>
-                    <h2>Know More About Us</h2>
-                    <hr>
-                    <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore etae magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <button type="button" class="btn btn-success">Let's Know More</button>
-
-                </div>
-                <div class="col-md-6">
-                    <div>
-                        <img style="" src="{% static 'images/ycli.jpg' %}" alt="">
-                    </div>
-                    
-                </div>
+        <div class="row">
+          <div class="col-xl-4 col-lg-5" data-aos="fade-up">
+            <div class="content">
+              <h3>Why Choose YCLI for your ipsum dolor?</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Asperiores dolores sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus optio ad corporis.
+              </p>
+              <div class="text-center">
+                <a href="#" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+              </div>
             </div>
+          </div>
+          <div class="col-xl-8 col-lg-7 d-flex">
+            <div class="icon-boxes d-flex flex-column justify-content-center">
+              <div class="row">
+                <div class="col-xl-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-receipt"></i>
+                    <h4>Corporis voluptates sit</h4>
+                    <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-cube-alt"></i>
+                    <h4>Ullamco laboris ladore pan</h4>
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-images"></i>
+                    <h4>Labore consequatur</h4>
+                    <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
-    
-</div> -->
+
+      </div>
+    </section><!-- End Why Us Section -->
+</main>
+
+
+
 
 <div>
     <!-- background starts -->
@@ -120,7 +124,7 @@
                     </div>
                 </div>
                 <!-- CTA Ends -->
-                <!-- CTA starts -->
+                CTA starts
                 <div class="col" style="border: 1px solid #154360; padding: 5px; margin: 10px; border-radius: 5px; background-color: #fff;">
                     <div>
                         <img style="display: block; margin: auto; width: 100%; height: 170px;" src="{% static 'images/ycli30.jpeg' %}">

@@ -15,6 +15,6 @@ class SignUpView(CreateView):
 
 
 @login_required
-def dashboard(request):
-	return render(request, 'accounts/dashboard.html')
+def my_applications_view(request):
+	return render(request, 'accounts/my_applications.html')
 

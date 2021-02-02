@@ -1,228 +1,89 @@
 {% load static %}
 
-<style type="text/css" >
-
-  ul.social-network {
-  list-style: none;
-  display: inline;
-  margin-left:0 !important;
-  padding: 0;
-}
-
-ul.social-network li {
-  display: inline;
-  margin: 0 5px;
-}
-
-.social-network a.icoFacebook:hover {
-  background-color:#3B5998;
-}
-.social-network a.icoTwitter:hover {
-  background-color:#33ccff;
-}
-.social-network a.icoVimeo:hover {
-  background-color:#0590B8;
-}
-.social-network a.icoLinkedin:hover {
-  background-color:#007bb7;
-}
-.social-network a.icoFacebook:hover i, .social-network a.icoTwitter:hover i, .social-network a.icoVimeo:hover i, .social-network a.icoLinkedin:hover i {
-  color:#fff;
-}
-
-a.socialIcon:hover, .socialHoverClass {
-  color:#44BCDD;
-}
-
-.social-circle li a {
-  display:inline-block;
-  position:relative;
-  margin:0 auto 0 auto;
-  -moz-border-radius:50%;
-  -webkit-border-radius:50%;
-  border-radius:50%;
-  text-align:center;
-  width: 18px;
-  height: 18px;
-  font-size:9px;
-  background-color: #D3D3D3;
-}
-.social-circle li i {
-  margin:0;
-  line-height:18px;
-  text-align: center;
-}
-.social-circle li a:hover i, .triggeredHover {
-  -moz-transform: rotate(360deg);
-  -webkit-transform: rotate(360deg);
-  -ms--transform: rotate(360deg);
-  transform: rotate(360deg);
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  -ms-transition: all 0.2s;
-  transition: all 0.2s;
-}
-.social-circle i {
-  color: #fff;
-  -webkit-transition: all 0.8s;
-  -moz-transition: all 0.8s;
-  -o-transition: all 0.8s;
-  -ms-transition: all 0.8s;
-  transition: all 0.8s;
-}
-
-</style>
-
-
-
-<div style="" class="fixed-top">
-
-<!-- start top banner -->
-<div class="container-fluid"  style="background-color: #0B2B40; padding: 5px;">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-2">
-        <div>
-
-          <ul class="social-network social-circle">
-            
-            <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-            
-            <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-          </ul>
-
-        </div>
-      </div>
-
-      <div class="col-md-7" style="text-align: center; color: #fff; font-size: 14px; padding-top: 2px; font-family: Roboto; ">
-        
-        <ul class="social-network social-circle">
-
-          <li><i class="fa fa-map-marker" aria-hidden="true"></i>
-            Lenana Road, Nairobi
-          </li>
-          <li><i class="fa fa-phone-square" aria-hidden="true">
-            +254 711 602 162
-          </i></li>
-          <li><i class="fa fa-envelope-o"></i>
-            info@ycli.org
-          </li>
-
+  <!-- ======= Top Bar ======= -->
+  <section id="topbar" class="d-none d-lg-block">
+    <div class="container d-flex">
+      <div class="contact-info mr-auto">
+        <ul>
+          <li><i class="icofont-envelope"></i><a href="mailto:info@ycli.org">info@ycli.org</a></li>
+          <li><i class="icofont-phone"></i>+254 711 602 162</li>
+          <li><i class="icofont-clock-time icofont-flip-horizontal"></i> Mon-Fri 9am - 5pm</li>
         </ul>
-        
       </div>
-
-      <div class="col-md-3">
-        <div id="google_translate_element" class="float-right"></div>
+      <div class="cta">
+        <a href="/donate/" class="scrollto">DONATE</a>
       </div>
-
     </div>
-  </div>
-  
-</div>
+  </section>
 
-<!-- end top banner -->
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="container d-flex">
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="border-bottom: 1px solid #E74C3C;">
-    <div class="container" style="padding: 7px;">
-
-      <div class="logo">
-          <a href="/"><img src="https://res.cloudinary.com/atgthegeek/image/upload/v1610200578/images/ycli_lbcuic.jpg" style="height: 35px; width: 250px;" alt=""></a>
+      <div class="logo mr-auto">
+        <!-- <h1 class="text-light"><a href="index.html"><span>Flexor</span></a></h1> -->
+        <!-- Uncomment below if you prefer to use an image logo -->
+         <a href="/"><img src="https://res.cloudinary.com/atgthegeek/image/upload/v1610200578/images/ycli_lbcuic.jpg" alt="" class="img-fluid"></a>
       </div>
 
-        <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="/">Home</a></li>
+          <li><a href="{% url 'about' %}">About Us</a></li>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+          <li><a href="/programs/">Programs</a></li>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            &nbsp;&nbsp;
-            <li class="nav-item active">
-              <a style="color: #000; font-size: 16px;" class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a style="color: #000; font-size: 16px;" class="nav-link" href="{% url 'about' %}">About</a>
-            </li>
-            <li class="nav-item">
-              <a style="color: #000; font-size: 16px;" class="nav-link" href="/programs/">Programs</a>
-            </li>
-            <!-- <li class="nav-item">
-              <a style="color: #000; font-size: 16px;" class="nav-link" href="/workshops/">Workshops</a>
-            </li>
-            <li class="nav-item">
-              <a style="color: #000; font-size: 16px;" class="nav-link" href="/events/">Events</a>
-            </li> -->
-            
-            <li class="nav-item dropdown">
-              <a style="color: #000; font-size: 16px;" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Media
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a style="color: #000; font-size: 16px;" class="dropdown-item" href="/events/">Our Events</a>
-                <a style="color: #000; font-size: 16px;" class="dropdown-item" href="/workshops/">Our Workshops</a>
-                <!-- <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a> -->
-              </div>
-            </li>
-
-            <!-- <li class="nav-item">
-              <a class="nav-link disabled" href="#">Disabled</a>
-            </li> -->
-
-            <li class="nav-item">
-              <a style="color: #000; font-size: 16px;" class="nav-link" href="/members/">Members</a>
-            </li>
-
-            <li class="nav-item">
-              <a style="color: #000; font-size: 16px;" class="nav-link" href="/contact/">Contact</a>
-            </li>
-
-          </ul>
+          <li class="drop-down"><a href="#">Media</a>
+            <ul>
+              <li><a href="/events/">Our Events</a></li>
+              <li><a href="/workshops/">Our Workshops</a></li>
+            </ul>
+          </li>
           
-            <a class="nav-link" href="/donate/">
-                <button type="button" class="btn btn-outline-secondary btn-sm">Donate</button>
-            </a>
+          <li><a href="/members/">Members</a></li>
+          <li><a href="/contact/">Contact</a></li>
 
           {% if user.is_authenticated %}
 
-            <!--  <li class="nav-item"> -->
-              <a class="nav-link" href="{% url 'dashboard' %}">
-                <button type="button" class="btn btn-primary btn-sm">DASHBOARD</button>
-              </a>
-            <!-- </li> -->
+          <!--  <li class="nav-item"> -->
+          <li>
+            <a class="nav-link" href="{% url 'my-applications' %}">
+              <button type="button" class="btn btn-primary btn-sm">DASHBOARD</button>
+            </a>
+          </li>
+          <!-- </li> -->
 
-            <!-- <li class="nav-item"> -->
-              <a class="nav-link" href="{% url 'logout' %}">
-                <button type="button" class="btn btn-warning btn-sm">LOG OUT</button>
-              </a>
-           <!--  </li> -->
+          <!-- <li class="nav-item"> -->
+          <li>
+            <a class="nav-link" href="{% url 'logout' %}">
+              <button type="button" class="btn btn-warning btn-sm">LOG OUT</button>
+            </a>
+          </li>
+          <!--  </li> -->
 
-            {% else %}
+        {% else %}
 
-            <!-- <li class="nav-item"> -->
-              <a class="nav-link" href="{% url 'login' %}">
-                <button type="button" class="btn btn-primary btn-sm">LOG IIN</button>
-              </a>
-            <!-- </li> -->
+          <!-- <li class="nav-item"> -->
+          <li>
+            <a class="nav-link" href="{% url 'login' %}">
+              <button type="button" class="btn btn-primary btn-sm">LOG IN</button>
+            </a>
+          </li>
+          <!-- </li> -->
 
-            <!-- <li class="nav-item"> -->
-              <a class="nav-link" href="{% url 'signup' %}">
-                <button type="button" class="btn btn-success btn-sm">REGISTER</button>
-              </a>
-            <!-- </li> -->
+          <!-- <li class="nav-item"> -->
+          <li>
+            <a class="nav-link" href="{% url 'signup' %}">
+              <button type="button" class="btn btn-success btn-sm">REGISTER</button>
+            </a>
+          </li>
+          <!-- </li> -->
 
-            {% endif %}
+        {% endif %}
 
-            </ul>
+        </ul>
 
-        </div>
+      </nav><!-- .nav-menu -->
 
     </div>
-
-  </nav>
-
-</div>
+  </header><!-- End Header -->

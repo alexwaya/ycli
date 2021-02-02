@@ -57,6 +57,8 @@ INSTALLED_APPS = [
 
     'donate',
     'tinymce',
+
+    'chatroom',
 ]
 
 X_FRAME_OPTIONS='SAMEORIGIN' # only if django version >= 3.0

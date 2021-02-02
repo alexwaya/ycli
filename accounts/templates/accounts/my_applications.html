@@ -1,0 +1,31 @@
+{% extends 'accounts/dashboard.html' %}
+
+{% block title %}My Applications{% endblock %}
+{% block dashboard_content %}
+{% load static %}
+
+<div class="container-fluid">
+    <h5 class="mt-4">Dashboard</h5>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item active">Hello {{ request.user | title }}, you have applied for the following programs</li>
+    </ol>
+
+    <div class="container">
+
+        {% for application in request.user.applications.all %}
+
+        <div class="application">
+            {{ application.program.title }}
+        </div>
+
+        {% empty %}
+
+        <p>You haven't applied for any applications yet</p>
+
+        {% endfor %}
+
+    </div>
+    
+</div>
+
+{% endblock %}
