@@ -97,14 +97,16 @@ h1, h2, h3, h4, h5, h6 {
 
 #topbar .cta a {
   color: #fff;
-  background: #A93226;
+  background: #800000;
   padding: 8px 20px;
-  display: inline-block  transition: 0.3s;
-  height: 100%;
+  display: inline-block;
+  transition: 0.3s;
+  text-decoration: none;
 }
 
 #topbar .cta a:hover {
   background: #ff6b3b;
+
 }
 
 /*--------------------------------------------------------------
@@ -2174,14 +2176,15 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  color: #313030;
+  color: #fff;
   font-size: 14px;
   background: #fff;
+
 }
 
 #footer .footer-top {
   padding: 60px 0 30px 0;
-  background: #fff9f7;
+  background-color: #800000;
 }
 
 #footer .footer-top .footer-contact {
@@ -2201,13 +2204,13 @@ section {
   line-height: 24px;
   margin-bottom: 0;
   font-family: "Raleway", sans-serif;
-  color: #656262;
+  color: #fff;
 }
 
 #footer .footer-top h4 {
   font-size: 16px;
   font-weight: bold;
-  color: #313030;
+  color: #EAF2F8;
   position: relative;
   padding-bottom: 12px;
 }
@@ -2224,7 +2227,7 @@ section {
 
 #footer .footer-top .footer-links ul i {
   padding-right: 2px;
-  color: #ffa587;
+  color: #fff;
   font-size: 18px;
   line-height: 1;
 }
@@ -2240,7 +2243,7 @@ section {
 }
 
 #footer .footer-top .footer-links ul a {
-  color: #656262;
+  color: #EAF2F8;
   transition: 0.3s;
   display: inline-block;
   line-height: 1;
@@ -2248,7 +2251,7 @@ section {
 
 #footer .footer-top .footer-links ul a:hover {
   text-decoration: none;
-  color: #A93226;
+  color: #EAF2F8;
 }
 
 #footer .footer-newsletter {
@@ -2258,7 +2261,7 @@ section {
 #footer .footer-newsletter h4 {
   font-size: 16px;
   font-weight: bold;
-  color: #313030;
+  color: #EAF2F8;
   position: relative;
   padding-bottom: 12px;
 }
