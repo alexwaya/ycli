@@ -77,7 +77,7 @@ ROOT_URLCONF = 'ycli.urls'
 
 AUTH_USER_MODEL = 'accounts.CustomUser' # new
 
-LOGIN_REDIRECT_URL = 'dashboard'
+LOGIN_REDIRECT_URL = 'my-applications'
 LOGOUT_REDIRECT_URL = 'home'
 
 
