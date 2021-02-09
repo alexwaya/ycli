@@ -27,9 +27,9 @@ from program.views import add_program
 from pages.views import about_view, contact_view, members_directory, members_detail
 
 urlpatterns = [
-    path('sadmin/', admin.site.urls),
+    path('admin/', admin.site.urls),
 
-    path('fy/', home_view, name="home"),
+    path('', home_view, name="home"),
     path('about/', about_view, name="about"),
     path('contact/', contact_view, name="contact"),
 
