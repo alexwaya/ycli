@@ -4,28 +4,58 @@
 {% block dashboard_content %}
 {% load static %}
 
-<div class="container-fluid">
-    <h5 class="mt-4">Dashboard</h5>
-    <ol class="breadcrumb mb-4">
-        <li class="breadcrumb-item active">Hello {{ request.user | title }}, you have applied for the following programs</li>
-    </ol>
 
-    <div class="container">
 
-        {% for application in request.user.applications.all %}
+<div class="container">
 
-        <div class="application">
-            {{ application.program.title }}
+<div style="height: 50px;"></div>
+    <div class="card mb-4">
+        <div class="card-header">
+            <i class="fas fa-table mr-1"></i>
+           My Applications
         </div>
-
-        {% empty %}
-
-        <p>You haven't applied for any applications yet</p>
-
-        {% endfor %}
-
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Program Title</th>
+                            <th>Location</th>
+                            <th>Date from</th>
+                            <th>Date to</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>Program Title</th>
+                            <th>Location</th>
+                            <th>Date from</th>
+                            <th>Date to</th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        {% for application in request.user.applications.all %}
+                        <tr>
+                            <td>
+                                {{ application.program.title }}
+                            </td>
+                            <td>
+                                {{ application.program.location }}
+                            </td>
+                            <td>
+                                {{ application.program.date_from }}
+                            </td>
+                            <td>
+                                {{ application.program.date_to }}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
-    
+
 </div>
 
 {% endblock %}
