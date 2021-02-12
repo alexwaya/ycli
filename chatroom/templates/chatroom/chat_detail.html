@@ -7,7 +7,7 @@
 <div class="container-fluid">
     <h5 class="mt-4"></h5>
     <ol class="breadcrumb mb-4">
-        <li class="breadcrumb-item active">Hello {{ request.user | title }}, you have applied for the following programs</li>
+        <li class="breadcrumb-item active"><a href="{% url 'my_dashboard_view' %}" style="text-decoration: none;">Dashboard</a>&nbsp;/&nbsp; <a style="text-decoration: none;" href="{% url 'chat_index' %}">Chats</a>&nbsp;/ {{ post.title | title }} Engagements</li>
     </ol>
 
     <div class="container">

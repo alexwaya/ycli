@@ -7,13 +7,17 @@
 
 
 <div class="container">
+<div style="height: 8px;"></div>
+<h5 class="mt-4"></h5>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item active"><a href="{% url 'my_dashboard_view' %}" style="text-decoration: none;">Dashboard</a>&nbsp; / My Applications</li>
+    </ol>
 
-<div style="height: 50px;"></div>
     <div class="card mb-4">
-        <div class="card-header">
+        <!-- <div class="card-header">
             <i class="fas fa-table mr-1"></i>
            My Applications
-        </div>
+        </div> -->
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
