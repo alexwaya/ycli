@@ -9,7 +9,7 @@ def raise_issue(request):
         if form.is_valid():
             form.save()
             
-            return redirect('home')
+            return redirect('chat_index')
     else:
         form = RaiseIssueForm()
     return render(request, 'chatroom/raise_issue.html', {'form': form})

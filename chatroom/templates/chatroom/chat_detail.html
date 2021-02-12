@@ -12,13 +12,10 @@
 
     <div class="container">
 
-        <div class="col-md-10 offset-md-1">
+        <div class="">
             <h4>{{ post.title }}</h4>
 
-            <small>
-                {{ post.created_on.date }} |&nbsp;
-               
-            </small>
+            <hr>
 
             <p>{{ post.body | linebreaks }}</p>
 
@@ -43,9 +40,11 @@
                       </div>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <div class="form-group">
+                <button type="submit" class="btn btn-success btn-block">Submit Opinion</button>
+              </div>
             </form>
-            <h3>Comments:</h3>
+            <h5>Comments:</h5>
             {% for comment in comments %}
             <p>
                 On {{comment.created_on.date }}&nbsp;
