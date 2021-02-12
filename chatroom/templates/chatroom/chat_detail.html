@@ -5,15 +5,15 @@
 {% load static %}
 
 <div class="container-fluid">
-    <h5 class="mt-4">Dashboard</h5>
+    <h5 class="mt-4"></h5>
     <ol class="breadcrumb mb-4">
         <li class="breadcrumb-item active">Hello {{ request.user | title }}, you have applied for the following programs</li>
     </ol>
 
     <div class="container">
 
-        <div class="col-md-8 offset-md-2">
-            <h1>{{ post.title }}</h1>
+        <div class="col-md-10 offset-md-1">
+            <h4>{{ post.title }}</h4>
 
             <small>
                 {{ post.created_on.date }} |&nbsp;
@@ -22,15 +22,26 @@
 
             <p>{{ post.body | linebreaks }}</p>
 
-            <h3>Leave a comment:</h3>
+            <h5>Engage</h5>
 
-            <form action="/dashboard/chatroom/{{ post.pk }}/" method="post">
+            <form action="/dashboard/chatroom/chat/{{ post.pk }}/" method="post">
                 {% csrf_token %}
-                <div class="form-group">
-                    {{ form.author }}
+                <div class="row">
+                    <div class="col">
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Title</label>
+                        <input type="text" class="form-control" name="author" aria-describedby="emailHelp" placeholder="Title" required>
+                      </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    {{ form.body }}
+                <div class="row">
+                    <div class="col">
+                      <div class="form-group">
+                          <label for="exampleInputEmail1">Your opinion</label>
+
+                          <textarea type="text" class="form-control" aria-describedby="emailHelp" rows="4" cols="55" name="body" placeholder="Body" required></textarea>
+                      </div>
+                    </div>
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
