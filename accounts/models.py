@@ -3,7 +3,11 @@ from django.db import models
 
 class CustomUser(AbstractUser):
     org_name     = models.CharField(max_length=30, default="Organization", help_text='Organization Name.')
+    #Organization type
+    org_type    =   models.CharField(max_length=100)
+
     photo = models.ImageField(upload_to='images/', default='attach photo')
+
     #company contact details
     org_email		= 	models.CharField(max_length=100)
     org_phone		= 	models.CharField(max_length=100)
@@ -20,9 +24,6 @@ class CustomUser(AbstractUser):
 
     #Number of staff in your organization.
     staff_no	= 	models.CharField(max_length=100)
-
-    #Organization type
-    org_type	= 	models.CharField(max_length=100)
 
     #What is your organization's mission statement
     mission		= 	models.TextField(max_length=100)
