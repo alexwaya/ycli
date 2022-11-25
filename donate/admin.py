@@ -1,17 +1,17 @@
-from django.contrib import admin
-from .models import Donation
+# from django.contrib import admin
+# from .models import Donation
 
-class DonationAdmin(admin.ModelAdmin):
-	list_display = [
+# class DonationAdmin(admin.ModelAdmin):
+# 	list_display = [
 
-    		'fname', 
-        	'lname',
-        	'email', 
-        	'phone', 
-        	'type_of_donation', 
-        	'amount', 
+#     		'fname', 
+#         	'lname',
+#         	'email', 
+#         	'phone', 
+#         	'type_of_donation', 
+#         	'amount', 
 
-    ]
+#     ]
 
 
-admin.site.register(Donation, DonationAdmin)
+# admin.site.register(Donation, DonationAdmin)

@@ -1,16 +1,16 @@
-from django.contrib import admin
-from .models import Chat, Category
+# from django.contrib import admin
+# from .models import Chat, Category
 
-class ChatAdmin(admin.ModelAdmin):
-    list_display = [
+# class ChatAdmin(admin.ModelAdmin):
+#     list_display = [
 
-		'title',
-    	'body',
+# 		'title',
+#     	'body',
     	
-]
+# ]
 
-class CategoryAdmin(admin.ModelAdmin):
-    pass
+# class CategoryAdmin(admin.ModelAdmin):
+#     pass
 
-admin.site.register(Chat, ChatAdmin)
-admin.site.register(Category, CategoryAdmin)
+# admin.site.register(Chat, ChatAdmin)
+# admin.site.register(Category, CategoryAdmin)
